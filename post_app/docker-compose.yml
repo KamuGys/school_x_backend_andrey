@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+
+  db:
+    image: postgres:15
+    container_name: post_db
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: post_db
+    ports:
+      - "5432:5432"
+
+  app:
+    build: .
+    container_name: post_app
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_URL=postgresql+asyncpg://user:password@db:5432/post_db
+    volumes:
+      - .:/app

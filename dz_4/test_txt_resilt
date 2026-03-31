@@ -1,0 +1,13 @@
+Регистрация: 400 {'detail': 'User exists'}
+Логин: 200 {'access_token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NH0.umCOvp_B09IhnoG5SuXBkIlc2Njtjn0-sVmobz4EPG8'}
+Создание задачи: 200 {'description': 'Desc', 'created_at': '2026-03-21T08:08:25.357622', 'status': 'pending', 'title': 'Test', 'id': 1}
+POST комментарий: 200 {'task_id': 1, 'created_at': '2026-03-21T08:08:25.380902', 'id': 1, 'content': 'Comment 1'}
+GET комментарии: 200 [{'task_id': 1, 'created_at': '2026-03-21T08:08:25.380902', 'id': 1, 'content': 'Comment 1'}]
+TaskNotFound задача: 404 {'detail': {'error': {'code': 'TaskNotFound', 'message': 'Task not found'}}}
+TaskNotFound POST комментарий: 404 {'detail': {'error': {'code': 'TaskNotFound', 'message': 'Task not found'}}}
+TaskNotFound GET комментарии: 404 {'detail': {'error': {'code': 'TaskNotFound', 'message': 'Task not found'}}}
+Unit-тест: PASSED ✓
+Интеграционный тест: PASSED ✓
+
+ Tесты завершены
+(venv) PS C:\Users\Камила\Desktop\studies\school_x\and_dz> 
